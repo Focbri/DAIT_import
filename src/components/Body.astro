@@ -1,17 +1,23 @@
 ---
 import slider from "../assets/slider.png";
 ---
-<section class="flex w-full bg-[#000] justify-center text-[#fff] items-center gap-4">
-    <div class="w-[30%]">
-        <h2 class="text-6xl font-bold">Concentrador de Oxígeno</h2>
+<section class="flex w-full bg-[#000] lg:justify-center text-[#fff] items-center lg:gap-4 gap-2 px-3">
+    <div class="lg:w-[30%]">
+        <h2 class="lg:text-6xl text-2xl font-bold">Concentrador de Oxígeno</h2>
+        <div class="flex lg:hidden lg:w-[30%]  flex-col gap-7 text-left">
+            <span class="lg:text-3xl text-base">Marca Oliva, hasta 10 litros por minuto</span>
+            <div>
+                <a href="" class="border border-[#ff6a02] rounded py-2 lg:px-12 px-6 hover:border-none hover:text-[#000] hover:bg-[#fff]">Información</a>
+            </div>
+        </div>
     </div>
-    <div class="w-[25%]">
+    <div class="lg:w-[25%]">
         <img src={slider.src} alt="concentrador oxigeno" class="w-full">
     </div>
-    <div class="w-[30%] flex flex-col gap-14 text-right">
-        <span class="text-3xl">Marca Oliva, hasta 10 litros por minuto</span>
+    <div class="hidden lg:flex lg:w-[30%]  flex-col gap-14 text-right">
+        <span class="lg:text-3xl text-xl">Marca Oliva, hasta 10 litros por minuto</span>
         <div>
-            <a href="" class="border border-[#282828] rounded py-2 px-12 hover:border-none hover:text-[#000] hover:bg-[#fff]">Información</a>
+            <a href="" class="border border-[#ff6a02] rounded py-2 lg:px-12 px-6 hover:border-none hover:text-[#000] hover:bg-[#fff]">Información</a>
         </div>
     </div>
 </section>
