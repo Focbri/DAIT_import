@@ -1,23 +1,23 @@
 ---
-import slider from "../assets/slider.png";
+import slider from "../assets/sistemaImplantes.png";
+
 ---
-<section class="flex w-full bg-[#000] lg:justify-center text-[#fff] items-center lg:gap-4 gap-2 px-3">
-    <div class="lg:w-[30%]">
-        <h2 class="lg:text-6xl text-2xl font-bold">Concentrador de Oxígeno</h2>
-        <div class="flex lg:hidden lg:w-[30%]  flex-col gap-7 text-left">
-            <span class="lg:text-3xl text-base">Marca Oliva, hasta 10 litros por minuto</span>
-            <div>
-                <a href="" class="border border-[#ff6a02] rounded py-2 lg:px-12 px-6 hover:border-none hover:text-[#000] hover:bg-[#fff]">Información</a>
-            </div>
-        </div>
+<section class="flex flex-col lg:flex-row items-center justify-center w-full gap-6 bg-[#000] text-[#fff] px-3 my-10">
+  <div class="lg:w-[40%] w-full flex flex-col justify-center items-center lg:items-start gap-7 text-center lg:text-left">
+    <h2 class="text-2xl lg:text-6xl lg:w-[80%]">Sistema de Implantes</h2>
+    
+    <!-- Imagen se muestra después del título en móviles -->
+    <div class="w-full lg:hidden">
+      <img src={slider.src} alt="concentrador oxigeno" class="w-full">
     </div>
-    <div class="lg:w-[25%]">
-        <img src={slider.src} alt="concentrador oxigeno" class="w-full">
-    </div>
-    <div class="hidden lg:flex lg:w-[30%]  flex-col gap-14 text-right">
-        <span class="lg:text-3xl text-xl">Marca Oliva, hasta 10 litros por minuto</span>
-        <div>
-            <a href="" class="border border-[#ff6a02] rounded py-2 lg:px-12 px-6 hover:border-none hover:text-[#000] hover:bg-[#fff]">Información</a>
-        </div>
-    </div>
+
+    <span class="text-base lg:text-lg lg:w-[80%]">Nuestros implantes están diseñados para garantizar resultados excepcionales en cualquier solución.</span>
+    
+    <a href="/productos/sistema-implantes/" class="border border-[#ff6a02] rounded py-2 px-6 lg:px-12 hover:bg-[#ff6a02]">Información</a>
+  </div>
+
+  <!-- Imagen se muestra al lado en pantallas grandes -->
+  <div class="lg:w-[50%] w-full hidden lg:block">
+    <img src={slider.src} alt="concentrador oxigeno" class="w-full">
+  </div>
 </section>

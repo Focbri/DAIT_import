@@ -5,22 +5,26 @@ import solidaridad from "../assets/Clientes/solidaridad.png";
 import clinicaSP from "../assets/Clientes/clinicaSP.png";
 import clinicaI from "../assets/Clientes/clinicaInternacional.png";
 import hospital from "../assets/Clientes/hospitalFondo.png";
+
+const clientes = [esSalud, minsa, solidaridad, clinicaSP, clinicaI];
 ---
-<section id="clientes" class="h-full  justify-center items-center w-full flex flex-col gap-4  bg-[#000] mt-16 lg:mt-20 py-4">
-    <div class="w-full text-[#fff] flex justify-center">
-        <h2 class="text-2xl border-b-2 border-[#282828] w-[90%] lg:w-[84%]">Nuestros Clientes Potenciales</h2>
+
+<section id="clientes" class="h-full flex flex-col items-center gap-4 w-full bg-[#000] my-10 py-4">
+  <h2 class="text-4xl text-[#fff] border-b-2 border-[#282828] w-[90%] lg:w-[84%] text-center">Nuestros Clientes Potenciales</h2>
+  
+  <div class="w-[85%] grid lg:grid-cols-2 gap-4">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2 lg:py-10">
+      {clientes.map((cliente) => (
+        <img 
+          src={cliente.src} 
+          alt="cliente" 
+          class="border rounded-lg grayscale-0 lg:grayscale lg:hover:grayscale-0 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.5)]"
+        />
+      ))}
     </div>
-    <div class="w-[85%] grid lg:grid-cols-2 gap-4">
-        <div class="w-full grid lg:grid-cols-3 grid-cols-2 lg:gap-2 gap-4 lg:py-10">
-            <img src={esSalud.src} alt="HP" class="border rounded-lg grayscale-0 lg:grayscale lg:hover:grayscale-0 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.5)]"/>
-            <img src={minsa.src} alt="HP" class="border rounded-lg grayscale-0 lg:grayscale lg:hover:grayscale-0 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.5)]"/>
-            <img src={solidaridad.src} alt="HP" class="border rounded-lg grayscale-0 lg:grayscale lg:hover:grayscale-0 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.5)]"/>
-            <img src={clinicaSP.src} alt="HP" class="border rounded-lg grayscale-0 lg:grayscale lg:hover:grayscale-0 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.5)]"/>
-            <img src={clinicaI.src} alt="HP" class="border rounded-lg grayscale-0 lg:grayscale lg:hover:grayscale-0 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.5)]"/>
-        </div>
-        
-        <div class="w-full lg:flex justify-center items-center hidden">
-            <img src={hospital.src} alt="" class="w-full rounded-lg">
-        </div>
+
+    <div class="w-full hidden lg:flex justify-center items-center">
+      <img src={hospital.src} alt="hospital" class="w-full rounded-lg" />
     </div>
+  </div>
 </section>

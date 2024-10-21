@@ -1,0 +1,43 @@
+---
+import prueba from "../../../assets/Productos/accesorios.png";
+import Layout from "../../../layouts/Layout.astro";
+
+// Array de productos
+const productos = [
+  { id: 1, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 2, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 3, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 4, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 5, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 6, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 7, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 8, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 9, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
+  { id: 10, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src }
+];
+---
+
+<Layout title="Sistema de Implantes">
+  <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">DAIT Import Sistema de Implantes</h2>
+    <p class="text-[#6f6d6f] lg:w-[80%] w-[90%] text-center">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sint, fugiat beatae veniam cupiditate recusandae ut provident autem. Sit possimus exercitationem eveniet aut, voluptatem sint dolorem est temporibus nulla debitis?
+    </p>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
+        <!-- Bucle Astro para productos -->
+        {productos.map((producto) => (
+          <div class="flex flex-col justify-center items-center text-[#ff6a02] w-full">
+            <a href="/" class="lg:w-[80%] transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src={producto.imagen} alt={producto.nombre} />
+            </a>
+            <div class="flex justify-center flex-col text-center py-4">
+              <h4 class="lg:text-2xl text-xl font-bold">{producto.nombre}</h4>
+              <span class="text-[#adadad] lg:text-lg text-base">{producto.descripcion}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+  </section>
+</Layout>

@@ -27,9 +27,9 @@ const navLinks = [
     </button>
 
     <!-- Menú en pantallas grandes -->
-    <div class="hidden lg:flex space-x-6 h-8">
+    <div class="hidden lg:flex space-x-10 h-8">
       {navLinks.map(link => (
-        <a href={link.href} class="text-[#fff] hover:border-b-2 border-[#ff6a02] text-2xl 2xl:text-3xl">
+        <a href={link.href} class="text-[#fff] hover:border-b-2 border-[#ff6a02] text-xl 2xl:text-3xl">
           {link.label}
         </a>
       ))}
