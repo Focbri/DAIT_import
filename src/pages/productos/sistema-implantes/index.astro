@@ -1,39 +1,47 @@
 ---
-import prueba from "../../../assets/Productos/accesorios.png";
+import p5dMatrix from "../../../assets/Productos/implantes/P5D_matrix.png";
+import p5gMatrix from "../../../assets/Productos/implantes/P5G_matrix.png";
+import p7d from "../../../assets/Productos/implantes/P7D.png";
+import p1d from "../../../assets/Productos/implantes/P1D.png";
+import p7s_p9s from "../../../assets/Productos/implantes/p7s_p9s.png";
+import p7n from "../../../assets/Productos/implantes/p7n.png";
+import p1 from "../../../assets/Productos/implantes/p1.png";
+import p7 from "../../../assets/Productos/implantes/p7.png";
 import Layout from "../../../layouts/Layout.astro";
 
 // Array de productos
 const productos = [
-  { id: 1, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 2, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 3, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 4, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 5, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 6, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 7, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 8, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 9, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src },
-  { id: 10, nombre: "P5D MATRIX IMPLANT", descripcion: "Plataforma Conical", imagen: prueba.src }
+  { id: 1, nombre: "Implante P5D Matrix", descripcion: "Plataforma Cónica", imagen: p5dMatrix.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 2, nombre: "Implante de Matriz P5G", descripcion: "Plataforma Cónica", imagen: p5gMatrix.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 3, nombre: "Implante P7D", descripcion: "Plataforma Cónica", imagen: p7d.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 4, nombre: "Implante P1D", descripcion: "Plataforma Cónica", imagen: p1d.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 5, nombre: "Implantes P7S, P9S", descripcion: "Plataforma de una Pieza", imagen: p7s_p9s.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 6, nombre: "Implante P7N", descripcion: "Plataforma Cónica Estrecha", imagen: p7n.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 7, nombre: "Implante P1", descripcion: "Plataforma Hexagonal Interna", imagen: p1.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 8, nombre: "Implante P7", descripcion: "Plataforma Hexagonal Interna", imagen: p7.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" }
 ];
 ---
 
 <Layout title="Sistema de Implantes">
   <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
-    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">DAIT Import Sistema de Implantes</h2>
-    <p class="text-[#6f6d6f] lg:w-[80%] w-[90%] text-center">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sint, fugiat beatae veniam cupiditate recusandae ut provident autem. Sit possimus exercitationem eveniet aut, voluptatem sint dolorem est temporibus nulla debitis?
-    </p>
+    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Sistema de Implantes DAIT Import</h2>
+    <div class="text-[#6f6d6f] lg:w-[80%] w-[90%] text-center">
+      <p class="">
+        Los productos comercializados por DAIT Import son implantes dentales y productos protésicos relacionados que cuentan con una sólida experiencia en el mercado y que ofrecemos a un precio competitivo. Hoy en día, miles de profesionales de todo el mundo utilizan nuestros productos a diario. Todos nuestros implantes están fabricados con un material biocompatible: la aleación de titanio 5 de grado médico con una superficie extraordinaria.
+      </p>
+      <span class="font-bold">Todos nuestros productos cumplen con los más estrictos estándares de calidad internacionales.</span>
+    </div>
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:py-10 lg:w-[80%] w-[90%]">
         <!-- Bucle Astro para productos -->
         {productos.map((producto) => (
-          <div class="flex flex-col justify-center items-center text-[#ff6a02] w-full">
-            <a href="/" class="lg:w-[80%] transition-transform duration-300 ease-in-out transform hover:scale-105">
+          <div class="flex flex-col justify-center items-center text-[#ff9a02] w-full">
+            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
               <img src={producto.imagen} alt={producto.nombre} />
             </a>
-            <div class="flex justify-center flex-col text-center py-4">
-              <h4 class="lg:text-2xl text-xl font-bold">{producto.nombre}</h4>
-              <span class="text-[#adadad] lg:text-lg text-base">{producto.descripcion}</span>
+            <div class="flex justify-center flex-col py-4 w-full items-center text-center">
+              <h4 class="lg:text-2xl text-xl font-bold w-[80%]">{producto.nombre}</h4>
+              <span class="text-[#adadad] lg:text-lg text-base uppercase">{producto.descripcion}</span>
             </div>
           </div>
         ))}
