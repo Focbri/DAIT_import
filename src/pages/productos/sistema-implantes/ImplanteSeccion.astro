@@ -1,10 +1,10 @@
 ---
+// ImplanteSeccion.astro
 import sbtc from "../../../assets/Logos/sbtc_Logo.png";
 import hidro from "../../../assets/Logos/hidrofilicidad_Logo.png";
 import sterile from "../../../assets/Logos/sterile_Logo.png";
 
-// ImplanteSection.astro
-const { title, subtitle, imageSrc, bannerImage, description, features, fichaLink, cotizarLink } = Astro.props;
+const { title, subtitle, imageSrc, bannerImage, description, features = [], fichaLink, cotizarLink } = Astro.props;
 ---
 
 <section class="w-full flex flex-col justify-center items-center lg:pt-16 pt-4">
@@ -23,9 +23,13 @@ const { title, subtitle, imageSrc, bannerImage, description, features, fichaLink
             <div class="text-[#adadad]">
                 <span class="font-bold">{description}</span>
                 <ul class="mt-2">
-                    {features.map((feature) => (
-                        <li>{feature}</li>
-                    ))}
+                    {features.length > 0 ? (
+                        features.map((feature) => (
+                            <li>{feature}</li>
+                        ))
+                    ) : (
+                        <li>No hay características disponibles.</li>
+                    )}
                 </ul>
             </div>
             <div class="w-full flex justify-center p-4 gap-6 text-[#fff]">
@@ -35,7 +39,7 @@ const { title, subtitle, imageSrc, bannerImage, description, features, fichaLink
         </div>
     </div>
 </section>
-<section class=" w-full justify-center items-center flex gap-4 flex-col lg:py-4 pt-4">
+<section class="w-full justify-center items-center flex gap-4 flex-col lg:py-4 pt-4">
     <div class="flex items-center lg:flex-row flex-col justify-center lg:gap-4 gap-2 w-[80%] border-t border-[#282828]">
         <div class="p-2 flex justify-center flex-col text-center lg:gap-4 gap-1">
             <div class="w-full flex justify-center">
@@ -46,7 +50,7 @@ const { title, subtitle, imageSrc, bannerImage, description, features, fichaLink
         </div>
         <div class="p-2 flex justify-center flex-col text-center gap-4">
             <div class="w-full flex justify-center">
-                <img src={hidro.src} alt="" >
+                <img src={hidro.src} alt="">
             </div>
             <h3 class="text-[#fff] font-bold text-2xl">Hidrofilicidad</h3>
             <p class="text-[#adadad]">Gracias a la superficie hidrófila SBTC se acelera la atracción sanguínea y la formación ósea.</p>
